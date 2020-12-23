@@ -31,8 +31,8 @@ public class AuthenticationController {
     }
 
     @GetMapping("/verifyToken")
-    public ResponseEntity<Void> isTokenValid(){
-        return ResponseEntity.ok().build();
+    public ResponseEntity<Boolean> isTokenValid(@RequestParam String token){
+        return ResponseEntity.ok(loginService.validateToken(token));
     }
 
     @GetMapping("{error}")
