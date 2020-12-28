@@ -64,8 +64,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                         "/login",
                         "/api/user/add",
                         "/auth/**",
-                        "/oauth2/**",
-                        "/login/verifyToken**")
+                        "/oauth2/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
