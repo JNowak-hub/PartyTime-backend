@@ -1,9 +1,8 @@
 package pl.sdacademy.projectbackend.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.Ignore;
+
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,9 +13,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
@@ -28,7 +25,6 @@ import pl.sdacademy.projectbackend.exceptions.UserNotFound;
 import pl.sdacademy.projectbackend.model.User;
 import pl.sdacademy.projectbackend.oauth.facebook.model.AuthProvider;
 import pl.sdacademy.projectbackend.service.UserService;
-import pl.sdacademy.projectbackend.validaiton.customvalidators.emailavailable.EmailAvailableValidator;
 
 import java.util.Arrays;
 import java.util.List;
@@ -46,9 +42,6 @@ public class UserControllerTest {
     public static final String TEST_USER_LOGIN = "login";
     public static final String TEST_USER_EMAIL = "login@login.com";
     private MockMvc mockMvc;
-
-    @Mock
-    private EmailAvailableValidator emailAvailableValidator;
 
     @Mock
     private UserService userService;

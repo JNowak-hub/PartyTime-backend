@@ -37,6 +37,7 @@ public class JwtUtilTest {
         user = new User();
         user.setPassword("password");
         user.setLogin("login");
+        user.setEmail("email");
         user.setRole(Role.USER);
     }
 
